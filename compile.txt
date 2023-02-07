@@ -1,0 +1,20 @@
+0: load d0, $0
+3: load d1, $1
+
+L0:
+6: ifeq $0, $1
+9: jump L1
+
+11: ifgt $0, $1
+14: jump L2
+
+16: sub $1, $0, $1
+20: jump L0	
+
+L2:
+22: sub $0, $1, $0
+26: jump L0
+
+L1:
+28: out $0
+30: exit
